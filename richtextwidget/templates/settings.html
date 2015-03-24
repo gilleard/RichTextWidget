@@ -1,0 +1,22 @@
+{% import '_includes/forms' as forms %}
+
+{% if configOptions|length > 1 %}
+	{% set configInput %}
+		{{ forms.select({
+			id:      'configFle',
+			name:    'configFile',
+			options: configOptions,
+			value:   settings.configFile
+		}) }}
+	{% endset %}
+{% else %}
+	{% set configInput %}
+		<p>{{ 'You don’t have any <a href="http://buildwithcraft.com/docs/rich-text-fields#redactor-configs" target="_blank">Redactor configs</a> yet.'|t|raw }}</p>
+	{% endset %}
+{% endif %}
+
+{{ forms.field({
+	label:        "Config"|t,
+	instructions: "Custom Redactor configs saved as .json files in craft/config/redactor/."|t,
+	id:           'configFile'
+}, configInput) }}

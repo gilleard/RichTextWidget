@@ -1,0 +1,4 @@
+{
+	buttons: ['formatting','bold','unorderedlist','orderedlist','link','horizontalrule'],
+	formatting: ['h3', 'h4', 'h5', 'p']
+}
