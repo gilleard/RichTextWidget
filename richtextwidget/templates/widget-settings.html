@@ -9,16 +9,6 @@
 	errors:       settings.getErrors('title')
 }) }}
 
-{{ forms.radioGroupField({
-	label:        "Columns"|t,
-	instructions: "If you want this widget to span across multiple columns in the Dashboard."|t,
-	id:           'colspan',
-	name:         'colspan',
-	options:      colspanOptions,
-	value:        settings.colspan,
-	errors:       settings.getErrors('colspan')
-}) }}
-
 {{ forms.field({
 	label:        "Text"|t,
 	instructions: "The text of this widget, displayed on the dashboard."|t,
