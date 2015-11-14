@@ -37,7 +37,7 @@ class RichTextWidget_DashboardWidget extends BaseWidget
 
 	public function getBodyHtml()
 	{
-		return $this->getSettings()->copy;
+		return '<!-- force show even when html is empty -->' . $this->getSettings()->copy;
 	}
 
 }
